@@ -7,7 +7,7 @@
 
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <style>
         .error {
             color: crimson;
@@ -151,7 +151,7 @@
                     this.prevewImg = URL.createObjectURL(event.target.files[0]);
                 },
                 url_gambar: function(gambar){
-                    return 'image/' +gambar;
+                    return  gambar;
                 }
             }
         }
@@ -178,7 +178,7 @@
                     this.detailKelas = item[0];
                 },
                 url_gambar: function(gambar){
-                    return '../image/' +gambar;
+                    return gambar;
                 }
             }
         }
