@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes 1</title>
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .active {
+            background-color: brown;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <div>
+            <button v-bind:class="{ active: menu === 'Satu' }" v-on:click="menu = 'Satu'">Satu</button>
+            <button v-bind:class="{ active: menu === 'Dua' }" v-on:click="menu = 'Dua'">Dua</button>
+            <button v-bind:class="{ active: menu === 'Tiga' }" v-on:click="menu = 'Tiga'">Tiga</button>
+        </div>
+        <div>
+            Form submit <br>
+            <input type="text" placeholder="Nama Kelas 1" v-on:keyup.enter="process">
+            <input type="text" placeholder="Nama Kelas 2" v-on:keyup.enter="process1" v-model="kelasbaru">
+        </div>
+        <p>
+            <ul v-show="kelas.length > 0">
+                <li v-for="(item,index) in kelas">{{ item }}</li>
+            </ul>
+        </p>
+        <p>
+            <ul v-if="kelas.length > 0">
+                <li v-for="(item,index) in kelas">{{ item }}</li>
+            </ul>
+            <div v-else>Data Kosong</div>
+        </p>
+        <p>
+            <input type="text" v-model="name">
+        </p>
+        <p>
+            <ul>
+                <li v-for="(item,index) in kelas">{{ index }} - {{ item }}</li>
+            </ul>
+        </p>
+        <p>
+            {{ kelas }} <br>
+            <label for=""><input type="checkbox" value="vue" v-model="kelas"> Vue</label>
+            <label for=""><input type="checkbox" value="angular" v-model="kelas"> Angular</label>
+            <label for=""><input type="checkbox" value="react" v-model="kelas"> React</label>
+        </p>
+        <p>
+            <ul>
+                <li v-for="x in 5">{{ x }}</li>
+            </ul>
+        </p>
+        <p>
+            <ul>
+                <li v-for="x in cariGenap(numbers)">{{ x }}</li>
+            </ul>
+        </p>
+        <h1 v-once>{{ getName() }}</h1>    <!-- gabisa di ganti text-->
+        <h1>{{ message }}</h1>    
+        <h1>{{ namaLengkap }}</h1>
+        <h1>{{ bilangan }} {{ infoBilangan }}</h1>
+        <p><button v-on:click="tekan">Tekan</button></p>
+        <p><button @click="tekan">Tekan</button></p>
+        <div>
+            <a v-bind:class="{ active: menu === 'Satu' }" href="#" v-on:click.prevent="gantiMenu('Satu')">Satu</a> <!-- prevent is not reload page-->
+            <a v-bind:class="{ active: menu === 'Dua' }" href="#" v-on:click.prevent="gantiMenu('Dua')">Dua</a>
+            <a v-bind:class="{ active: menu === 'Tiga' }" href="#" v-on:click.prevent="gantiMenu('Tiga')">Tiga</a>
+        </div>
+        <h1 v-text="bilangan*2"></h1>
+        <h1 v-html="links"></h1>
+        <img v-bind:src="images" alt="">
+        <img :src="images" alt="">
+        
+    </div>
+
+    <script src="./vue.js"></script>
+    <script>
+        const member = {
+            name: 'maswal',
+            message: 'Laki',
+            bilangan: 3,
+            links: "<a href=''>Tes</a>",
+            images: "./image/image 1.jpg",
+            menu: "Satu",
+            kelas: [],
+            kelasbaru: "",
+            numbers: [1,2,3,4,5]
+        }
+        //The Vue Instance
+        const vm = new Vue({
+            el: '#app',
+            data: member,
+            methods: {
+                getName: function() {
+                    return 'Hello, '+ this.name
+                },
+                ubahNama: function(nama) {
+                    this.name = nama
+                    return this.getName()
+                },
+                tekan: function() {
+                    this.bilangan++
+                    this.images = this.bilangan%2 === 0 ? './image/image 1.jpg' : './image/image 2.jpg';
+                },
+                cariGenap: (param) => {
+                    return param.filter(data => {
+                        return data%2 === 0
+                    })
+                },
+                gantiMenu: function(param) {
+                    this.menu = param
+                },
+                process: function(e) {
+                    this.kelas.push(e.target.value);
+                    e.target.value = "";
+                },
+                process1: function(e) {
+                    let data = e.target.value;
+                    this.kelas.unshift(this.kelasbaru);
+                    this.kelasbaru = "";
+                }
+            },
+            computed: {
+                namaLengkap: function() {
+                    return this.name +' '+ this.message
+                },
+                infoBilangan: function() {
+                    return this.bilangan%2 === 0 ? 'Genap' : 'Ganjil';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

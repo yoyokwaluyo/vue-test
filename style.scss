@@ -1,0 +1,112 @@
+$fontPrimary: 'Poppins', sans-serif;
+$bgHeader: #5d4954;
+$colorWhite: rgb(226, 226, 226);
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $bgHeader;
+    font-family: $fontPrimary;
+    height: 80px;
+
+    .logo {
+        color: $colorWhite;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        background-color: $bgHeader;
+        justify-content: space-around;
+        width: 35%;
+        list-style: none;
+        &.nav-active {
+            width: 60%;
+        }
+
+        a {
+            color: $colorWhite;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    }
+
+    .burger {
+        display: none;
+        cursor: pointer;
+        &.animate {
+            .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .line2 {
+                opacity: 0;
+            }
+            .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: $colorWhite;
+            margin: 5px;
+            transition: all .4s ease;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav {
+
+        .nav-links {
+            position: fixed;
+            top: 5rem;
+            right: 0;
+            height: 92vh;
+            flex-direction: column;
+            align-items: center;
+            width: 0%;
+            transition: all .35s ease-in;
+
+            li {
+                opacity: 0;
+            }
+        }
+
+        .burger {
+            display: block;
+        }
+    }
+}
+
+// @media (min-width: 992px) {
+//     nav {
+
+//         .nav-links {
+//             width: 60%;
+//         }
+//     }
+// }
+
+@keyframes navLinksFaded {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
