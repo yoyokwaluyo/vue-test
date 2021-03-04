@@ -52,6 +52,10 @@
           box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -564,6 +568,107 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 1020;
+  overflow: auto;
+}
+
+.modal .modal__content {
+  background-color: rgba(78, 153, 234, 0.7);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  width: 80%;
+  min-height: 80vh;
+  border-radius: 8px;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.modal .modal__content .modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+
+.modal .modal__content .modal__close i {
+  font-size: 28px;
+  color: var(--dark-color);
+}
+
+.modal .modal__content .modal__close i:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.modal .modal__content .modal__banner {
+  background-color: var(--white-color);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal .modal__content .modal__banner img {
+  width: 100% !important;
+  height: 300px !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.modal .modal__content .modal__description {
+  padding: 10px 20px;
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+}
+
+.modal .modal__content .modal__description h3 {
+  color: var(--white-color);
+  font-family: var(--body-font);
+}
+
+.modal .modal__content .modal__description .modal__text {
+  text-align: justify;
+}
+
+.modal .modal__content .modal__footer {
+  padding-right: 20px;
+}
+
+.modal .modal__content .modal__footer a {
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal__content .modal__footer a i {
+  margin-right: 3px;
+}
+
+.modal .modal__content .modal__footer a:hover {
+  color: var(--dark-color);
 }
 
 @media (max-width: 575.98px) {
