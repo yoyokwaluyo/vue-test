@@ -52,7 +52,7 @@ const sr = ScrollReveal({
 /*SCROLL HOME*/
 sr.reveal('.home__title', {})
 sr.reveal('.home__scroll', {delay: 200})
-sr.reveal('.home__img', {origin:'right', delay: 400})
+sr.reveal('.home__img', {origin:'right', delay: 200})
 
 /*SCROLL ABOUT*/
 sr.reveal('.about__img', {delay: 500})
@@ -71,6 +71,6 @@ sr.reveal('.portfolio__img', {interval: 200})
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__subtitle', {})
-sr.reveal('.contact__text', {interval: 200})
+sr.reveal('.contact__text', {interval: 100})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
