@@ -592,6 +592,7 @@ img {
   min-height: 80vh;
   border-radius: 8px;
   margin-top: 6%;
+  margin-bottom: 6%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -679,6 +680,12 @@ img {
   .home__img {
     width: 300px;
     right: 0%;
+  }
+  .modal .modal__content {
+    width: 95%;
+  }
+  .modal .modal__content .modal__banner img {
+    height: 250px !important;
   }
 }
 
