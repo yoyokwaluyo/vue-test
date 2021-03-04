@@ -9,6 +9,14 @@
             right: 0%;
         }
     }
+    .modal {
+        .modal__content {
+            width: 95%;
+            .modal__banner img {
+                height: 250px !important;
+            }
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up)

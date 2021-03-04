@@ -5,7 +5,7 @@ var addOns = {
     showModal: function(detail) {
         const modal = document.querySelector('.modal');
         var details = detail.getAttribute("data-isi");
-        modal.classList.add('is-visible');
+        
         modal.style.display = "block";
     },
     closeModal: function() {
