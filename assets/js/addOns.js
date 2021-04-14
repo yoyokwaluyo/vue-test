@@ -25,7 +25,7 @@ var addOns = {
 
         switch (param) {
             case 'mini':
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/mini.png";
+                imgModal.src = "./assets/img/mini.png";
                 titleModal.innerHTML = "PLAZA MINI";
                 contentModal.innerHTML = 
                     `<p>MINI Authorized Dealer, Plaza Mini sendiri merupakan hasil kolaborasi dari pihak MINI Indonesia dan juga Plaza Auto Raya. Plaza Mini sendiri berlokasi di lokasi yang strategis, yaitu di Jalan raya Boulevard Kav 5 No. 10 Gading, Serpong, Summarecon Tangerang. Gendung dari Plaza Mini sendiri juga cukup luas dengan adanya 6 lantai yang mengusung konsep Urban Modern.</p>
@@ -41,7 +41,7 @@ var addOns = {
                     </a>`;
                 break;
             case 'bmw':
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/bmw-indo.png";
+                imgModal.src = "./assets/img/bmw-indo.png";
                 titleModal.innerHTML = "BMW Group Indonesia";
                 contentModal.innerHTML = 
                     `<p>BMW Authorized Dealer,</p>
@@ -65,7 +65,7 @@ var addOns = {
                     </a>`;
                 break;
             case 'deva':
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/deva_auto_logo.png";
+                imgModal.src = "./assets/img/deva_auto_logo.png";
                 titleModal.innerHTML = "DEVAauto";
                 contentModal.innerHTML = 
                     `<p>The Best Used Cars, menjual mobil-mobil second premium yang tentunya siap digunakan bagi para konsumen yang mempunyai jiwa otomotif dengan selera tinggi.</p>
@@ -81,7 +81,7 @@ var addOns = {
                     </a>`;
                 break;
             case 'hris':
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/undraw_posting_photo_v65l.png";
+                imgModal.src = "./assets/img/undraw_posting_photo_v65l.png";
                 titleModal.innerHTML = "HRIS system";
                 contentModal.innerHTML = 
                     `<p>Sistem manajemen sumber daya manusia,</p>
@@ -103,7 +103,7 @@ var addOns = {
                     </a>`;
                 break;
             case 'toyota':
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/toyota.png";
+                imgModal.src = "./assets/img/toyota.png";
                 titleModal.innerHTML = "PLAZA TOYOTA";
                 contentModal.innerHTML = 
                     `<p>Toyota Authorized Dealer,</p>
@@ -124,7 +124,7 @@ var addOns = {
                     </a>`;
                 break;
             case 'bpaint':
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/bodypaint.png";
+                imgModal.src = "./assets/img/bodypaint.png";
                 titleModal.innerHTML = "PLAZA PAINT";
                 contentModal.innerHTML = 
                     `<p>Bengkel Body & Cat dibawah naungan Plaza Toyota Group</p>
@@ -141,7 +141,7 @@ var addOns = {
                 break;
 
             default:
-                imgModal.src = "/yoyokwaluyo.github.io/assets/img/undraw_posting_photo_v65l.png";
+                imgModal.src = "./assets/img/undraw_posting_photo_v65l.png";
                 titleModal.innerHTML = "This is Title Description";
                 linkModal.innerHTML = 
                     `<a href="#" target="_blank">
