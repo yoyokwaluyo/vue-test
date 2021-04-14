@@ -345,6 +345,19 @@ img {
 .portfolio__img {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 10px;
 }
 
 .portfolio__img img {
@@ -380,6 +393,17 @@ img {
 
 .portfolio__link-name {
   color: var(--dark-color);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* ===== CONTACT =====*/
@@ -589,7 +613,6 @@ img {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   width: 80%;
-  min-height: 80vh;
   border-radius: 8px;
   margin-top: 6%;
   margin-bottom: 6%;
@@ -621,11 +644,20 @@ img {
   background-color: var(--white-color);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal .modal__content .modal__banner img {
-  width: 100% !important;
-  height: 300px !important;
+  max-width: 300px !important;
   -o-object-fit: contain !important;
      object-fit: contain !important;
 }
@@ -646,23 +678,43 @@ img {
   text-align: justify;
 }
 
+.modal .modal__content .modal__description a {
+  color: var(--white-color);
+  text-decoration: underline;
+}
+
+.modal .modal__content .modal__description a:hover {
+  color: var(--dark-color);
+}
+
 .modal .modal__content .modal__footer {
   padding-right: 20px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .modal .modal__content .modal__footer a {
   color: var(--white-color);
   font-family: var(--body-font);
   font-size: var(--small-font-size);
+  margin: 0 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .modal .modal__content .modal__footer a i {
