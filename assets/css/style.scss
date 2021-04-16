@@ -309,6 +309,7 @@ img{
         overflow: hidden;
         
         width: 100%;
+        min-height: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -318,6 +319,7 @@ img{
         
         & img{
             border-radius: .5rem;
+            max-width: 160px;
         }
         
         &:hover .portfolio__link{

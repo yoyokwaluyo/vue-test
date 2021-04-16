@@ -346,6 +346,7 @@ img {
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,6 +363,7 @@ img {
 
 .portfolio__img img {
   border-radius: .5rem;
+  max-width: 160px;
 }
 
 .portfolio__img:hover .portfolio__link {
