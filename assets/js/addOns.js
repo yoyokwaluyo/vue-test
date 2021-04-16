@@ -139,6 +139,38 @@ var addOns = {
                         2020
                     </a>`;
                 break;
+            case 'kinto':
+                imgModal.src = "./assets/img/kinto-logo.png";
+                titleModal.innerHTML = "KINTO LANDING PAGE";
+                contentModal.innerHTML = 
+                    `<p>Subscribe Cars dari PT TOYOTA ASTRA FINANCIAL SERVICES</p>
+                    <br><p>Disini saya sebagai yang mengimplementasikan Web Design dan Fungsi Proses dari mockup yang sudah dibuat dari team UX untuk menjadi web.</p>`;
+                linkModal.innerHTML = 
+                    `<a href="https://www.rajamobil.com/kinto-2020" target="_blank">
+                        <i class='bx bx-globe'></i>
+                        Kinto
+                    </a>
+                    <a href="#">
+                        <i class='bx bx-calendar-alt'></i>
+                        2020
+                    </a>`;
+                break;
+            case 'tcash':
+                imgModal.src = "./assets/img/tcash.png";
+                titleModal.innerHTML = "Dashboard Transaction Tcash";
+                contentModal.innerHTML = 
+                    `<p>Dompet Digital dari Telkomsel</p>
+                    <br><p>Disini saya sebagai yang mengimplementasikan beberapa menu untuk tampil di dashboard.</p>`;
+                linkModal.innerHTML = 
+                    `<a href="https://www.rajamobil.com/kinto-2020" target="_blank">
+                        <i class='bx bx-block'></i>
+                        Internal Project
+                    </a>
+                    <a href="#">
+                        <i class='bx bx-calendar-alt'></i>
+                        2017
+                    </a>`;
+                break;
 
             default:
                 imgModal.src = "./assets/img/undraw_posting_photo_v65l.png";
